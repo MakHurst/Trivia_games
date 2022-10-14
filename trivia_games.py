@@ -30,8 +30,8 @@ def geo(): # Geography game
     print('In order to win, you need to get an 80% or greater\n')
     
     while user_strikes < max_strikes:
-        q_1 = input('What is the capital of Oregon?\n').lower()
-        if q_1 == 'salem':
+        q_1 = input('What is the capital of Massachusetts?\n').lower()
+        if q_1 == 'boston':
             user_points += 1
             print(f"Correct! Nice Job. You now have {user_points} point(s).")
         else:
@@ -524,7 +524,73 @@ def naruto_easy():
             user_strikes += 1
             print(f'Not quite! You now have {user_strikes} strike(s).\n')
         q5 = input("Who is Naruto's first love?\n").lower()
+        if q5 == 'sakura':
+            user_points += 1 
+            print(f'Great Job! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'WRONG! You now have {user_strikes} strike(s).\n')
+        q6 = input('Who is the 6th Hokage?\n').lower()
+        if q6 == 'kakashi':
+            user_points += 1
+            print(f'Nice Job! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Incorrect! You now have {user_strikes} strike(s).\n')
+        q7 = input(f'Who does Naruto want to bring back to the Leaf Village?\n').lower()
+        if q7 == 'sasuke':
+            user_points += 1
+            print(f'You are correct! You nmow ahve {user_points} strike(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Incorrct! You now have {user_strikes} strike(s)')
+        q8 = input('How many times did Naruto fail the garduation test at the academy?\n').lower()
+        if q8 == '3' or 'three':
+            user_points += 1
+            print(f'Amazing! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Nope! You now have {user_strikes} strike(s).\n')
+        q9 = input('Who did Kakashi get his eye from?\n' 'A: Donzo\n' 'B: Obito\n' 'C: Itachi\n' 'D: Madara\n').lower()
+        if q9 == 'obito' or 'b':
+            user_points += 1
+            print(f'You are doing amazing! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Wrong! You now have {user_strikes} strike(s).\n')
+        q10 = input('What does Naruto wear before he becomes a Genin?\n').lower()
+        if q10 == 'goggles':
+            user_points += 1
+            print(f'Good Job! You now have {user_points} ppoint(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Almost! You now have {user_strikes} strike(s).\n')
         
+
+    if user_strikes >= max_strikes:
+        print('You exceeded the number of strikes!\n')
+        print('Y O U  L O S E!!!\n')
+        play_again = int(input('Do you want to play again?' '1: Yes\n' '2: No\n'))
+        if play_again == 1:
+            game()
+        elif play_again == 2:
+            quit()
+    if user_points < 7:
+        print(f' You scored a {user_points}/10.\n')
+        print('Y O U  L O S E!!!\n')
+        play_again = int(input('Do you want to play again?\n' '1: Yes\n' '2: No\n'))
+        if play_again == 1:
+            game()
+        elif play_again == 2:
+            quit()
+    if user_points > 7:
+        print(f'You scored a {user_points}/10.\n')
+        print('Y O U  W I N!!!\n')
+        play_again = int(input('Do you want to play again?\n' '1: Yes\n' '2: No\n'))
+        if play_again == 1:
+            game()
+        elif play_again == 2:
+            quit()
 
 
 game()

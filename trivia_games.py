@@ -485,7 +485,7 @@ def naruto():
     if difficulty == 1:
         naruto_easy()
     elif difficulty == 2:
-        pass
+        naruto_medium()
     elif difficulty == 3:
         pass
 
@@ -626,7 +626,30 @@ def naruto_medium():
         else:
             user_strikes += 1
             print(f'Incorrect! You now have {user_strikes} strike(s).\n')
+        q5 = input('Who summoned the five kage for the five kage summit?\n').lower()
+        if q5 == 'raikage':
+            user_points += 1
+            print(f'Correct! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Wrong! You now have {user_strikes} strike(s).\n')
+        q6 = input("Who was the Sannin's sensei?\n").lower()
+        if q6 == 'sarutobi' or 'the 3rd hokage':
+            user_points += 1
+            print(f'Nice Job! You now have {user_points} point(s).')
+        else:
+            user_strikes += 1
+            print(f'Incorrect! You now have {user_strikes} strike(s).\n')
+        q7 = input('Which legendary Sannin became Hokage?\n').lower()
+        if q7 == 'tsunade' or 'lady tsunade':
+            user_points += 1
+            print(f'You are correct! You now ahve {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Wrong! You now have {user_strikes} strike(s).')
+        
 
+        
 
 
 

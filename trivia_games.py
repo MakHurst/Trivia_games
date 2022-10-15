@@ -646,8 +646,51 @@ def naruto_medium():
             print(f'You are correct! You now ahve {user_points} point(s).\n')
         else:
             user_strikes += 1
-            print(f'Wrong! You now have {user_strikes} strike(s).')
+            print(f'Wrong! You now have {user_strikes} strike(s).\n')
+        q8 = input('How many ninja made it to the third stage of the Chunin Exam').lower()
+        if q8 == '5' or 'five':
+            user_points += 1
+            print(f'Correct! You now have {user_points} point(s).\n')
+        q9 = input("Who is Naruto's biggest enemy?\n").lower()
+        if q9 == 'sasuke':
+            user_points += 1
+            print(f'Correct! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Wrong! You now have {user_strikes} strike(s).\n')
+        q10 = input('Are there two types of Jounin?\n' 'A: Yes\n' 'B: No\n').lower()
+        if q10 == 'yes' or 'a':
+            user_points += 1
+            print(f'Nice Job! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Incorrect! you now have {user_strikes} strike(s).\n')
         
+    
+    if user_strikes >= max_strikes:
+        print('You exceeded the number of strikes!\n')
+        print('Y O U  L O S E!!!\n')
+        play_again = int(input('Do you want to play again?' '1: Yes\n' '2: No\n'))
+        if play_again == 1:
+            game()
+        elif play_again == 2:
+            quit()
+    if user_points < 7:
+        print(f' You scored a {user_points}/10.\n')
+        print('Y O U  L O S E!!!\n')
+        play_again = int(input('Do you want to play again?\n' '1: Yes\n' '2: No\n'))
+        if play_again == 1:
+            game()
+        elif play_again == 2:
+            quit()
+    if user_points > 7:
+        print(f'You scored a {user_points}/10.\n')
+        print('Y O U  W I N!!!\n')
+        play_again = int(input('Do you want to play again?\n' '1: Yes\n' '2: No\n'))
+        if play_again == 1:
+            game()
+        elif play_again == 3:
+            quit()
 
         
 

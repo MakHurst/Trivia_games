@@ -592,5 +592,42 @@ def naruto_easy():
         elif play_again == 2:
             quit()
 
+def naruto_medium():
+    user_points = 0
+    user_strikes = 0
+    max_strikes = 5
+    print('Okay! Lets Begin!')
+    while user_strikes <= max_strikes:
+        q1 = input('Who held Naruto hostage when he was born?\n').lower()
+        if q1 == 'madara':
+            user_points += 1
+            print(f'That is correct! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Incorrect! You now have {user_strikes} strike(s).\n')
+        q2 = input('Who does NOT have Kekkei Genkai?\n').lower()
+        if q2 == 'naruto':
+            user_points += 1
+            print(f'Correct! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Incorrect! You now have {user_strikes} strike(s).\n')
+        q3 = input('Who killed Donzo?\n').lower()
+        if q3 == 'sasuke':
+            user_points += 1
+            print(f'Correct! You now have {user_points} point(s).\n')
+        else:
+            user_strikes += 1
+            print(f'Wrong! You now have {user_strikes} stike(s).\n')
+        q4 = input("What is Sasuke's Kekkei Genkai?\n").lower()
+        if q4 == 'sharingan':
+            user_points += 1
+            print(f'Great Job! You now have {user_points} point(s).')
+        else:
+            user_strikes += 1
+            print(f'Incorrect! You now have {user_strikes} strike(s).\n')
+
+
+
 
 game()
